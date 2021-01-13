@@ -9,7 +9,7 @@ const WelcomePage = () => {
 
 	const startGame = e => {
 		e.preventDefault();
-		const username = e.target[0].value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');;
+		const username = e.target[0].value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 		if (username.length >= 2) {
 			setUser(e.target[0].value);
 			setMode('play');

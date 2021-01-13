@@ -7,7 +7,7 @@ const GameWord = ({ selectWord, checkMode, isWordSelected, isGoodWord, word }) =
 	>
 		<span
 			className={`
-			${!checkMode && isWordSelected ? "selected" : ''}
+			${!checkMode && isWordSelected ? 'selected' : ''}
 			${checkMode && isWordSelected ? isGoodWord ? 'good' : 'wrong' : ''} 
 			`}
 		>

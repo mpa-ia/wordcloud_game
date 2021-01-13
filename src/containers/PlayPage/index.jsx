@@ -8,7 +8,7 @@ const PlayPage = () => {
 	const [game, setGameData] = useState(null);
 	const [checkMode, setCheckMode] = useState(false);
 	useEffect(() => {
-		fetch("/api/games/")
+		fetch('/api/games/')
 			.then(response => {
 				if (!response.ok) throw Error(response.statusText);
 				return response.json();
