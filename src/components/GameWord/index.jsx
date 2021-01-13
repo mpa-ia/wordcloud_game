@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const GameWord = ({ selectWord, checkMode, isWordSelected, isGoodWord, word }) =>
 	<div
@@ -21,5 +22,12 @@ const GameWord = ({ selectWord, checkMode, isWordSelected, isGoodWord, word }) =
 				: null}
 		</span>
 	</div>
-;
+	;
+GameWord.propTypes = {
+	word: PropTypes.string,
+	checkMode: PropTypes.bool.isRequired,
+	isGoodWord: PropTypes.bool.isRequired,
+	isWordSelected: PropTypes.bool.isRequired,
+	selectWord: PropTypes.func.isRequired,
+};
 export default GameWord;

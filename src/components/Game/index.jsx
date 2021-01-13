@@ -1,5 +1,6 @@
 import React from 'react'
 import GameWord from '../GameWord';
+import PropTypes from 'prop-types';
 
 const Game = ({ title, allWords, goodWords, selectWord, selectedWords, checkMode }) => {
 	const [wordsWithClassnames, setClassnamesForWords] = React.useState([]);
@@ -34,5 +35,12 @@ const Game = ({ title, allWords, goodWords, selectWord, selectedWords, checkMode
 		</div>
 	)
 };
-
+Game.propTypes = {
+	title: PropTypes.string,
+	allWords: PropTypes.arrayOf(PropTypes.string).isRequired,
+	goodWords: PropTypes.arrayOf(PropTypes.string).isRequired,
+	selectedWords: PropTypes.arrayOf(PropTypes.string).isRequired,
+	checkMode: PropTypes.bool.isRequired,
+	selectWord: PropTypes.func.isRequired,
+};
 export default Game;
