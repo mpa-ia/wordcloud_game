@@ -5,9 +5,87 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 600px;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0 auto;
+}
+li[class^="listItem_"] div {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+li[class^="listItem_"] div.not_clickable {
+  cursor: default;
+}
+li[class^="listItem_"] div i {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+li[class$="1"] {
+  padding: 20px;
+}
+li[class$="2"] {
+  padding: 30px;
+}
+li[class$="3"] {
+  padding: 40px;
+}
+li[class$="4"] {
+  padding: 50px;
+}
+li[class$="5"] {
+  padding: 60px;
+}
+.good {
+  color: greenyellow;
+}
+.wrong {
+  color: red;
+}
+.selected {
+  color: grey;
+}
+.info {
+  color: steelblue;
+}
+button {
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  padding: 8px 26px;
+  color: steelblue;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+button:hover, button:focus, button:active {
+  color: skyblue;
+  border-color: skyblue;
+  outline: none;
+}
+input {
+  border: 1px solid lightgray;
+  padding: 8px 16px;
+  box-shadow: none;
+  outline: none;
 }
